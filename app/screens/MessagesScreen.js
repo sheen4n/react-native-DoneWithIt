@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import Screen from '../components/Screen';
-import {
-  ListItem,
-  ListItemDeleteAction,
-  ListItemSeparator,
-} from '../components/lists';
+import { ListItem, ListItemDeleteAction, ListItemSeparator } from '../components/lists';
 
 const initialMessages = [
   {
@@ -47,9 +43,7 @@ const MessagesScreen = () => {
             title={item.title}
             subTitle={item.description}
             onPress={() => console.log('hi')}
-            renderRightActions={() => (
-              <ListItemDeleteAction onPress={handleDelete(item)} />
-            )}
+            renderRightActions={() => <ListItemDeleteAction onPress={handleDelete(item)} />}
             showChevron
           />
         )}
@@ -62,5 +56,3 @@ const MessagesScreen = () => {
 };
 
 export default MessagesScreen;
-
-const styles = StyleSheet.create({});
