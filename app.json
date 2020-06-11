@@ -17,6 +17,10 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "description": "A great app to sell things that you don't want",
+    "notification": {
+      "iosDisplayInForeground": true
     }
   }
 }

@@ -8,7 +8,6 @@ import CategoryPickerItem from '../components/CategoryPickerItem';
 import FormImagePicker from '../components/forms/FormImagePicker';
 import useLocation from '../hooks/useLocation';
 import listingApi from '../api/listings';
-import useApi from '../hooks/useApi';
 import UploadScreen from './UploadScreen';
 
 const validationSchema = Yup.object().shape({
