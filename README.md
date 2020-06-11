@@ -13,6 +13,15 @@ Or Scan the QR Code ![QRCode](QRCode.png)
 - You need to download Expo App from App Store or Google Play first.
 
 
+### Screenshots
+
+![Screen1](Screen1.jpeg)
+![Screen2](Screen2.jpeg)
+![Screen3](Screen3.jpeg)
+![Screen4](Screen4.jpeg)
+
+- You need to download Expo App from App Store or Google Play first.
+
 #### Run in Local Environment
 
 Getting Started
