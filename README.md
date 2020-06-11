@@ -15,7 +15,7 @@ Or Scan the QR Code ![QRCode](QRCode.png)
 
 ### Screenshots
 
-![Screen1](Screen1.jpeg)
+![Screen1](Screen1.jpeg = 200x400)
 ![Screen2](Screen2.jpeg)
 ![Screen3](Screen3.jpeg)
 ![Screen4](Screen4.jpeg)
