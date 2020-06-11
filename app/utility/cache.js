@@ -1,5 +1,6 @@
 import { AsyncStorage } from 'react-native';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import logger from './logger';
 
 const prefix = 'cache';
 const EXPIRY_IN_MINUTES = 5;
@@ -12,13 +13,13 @@ const store = async (key, value) => {
     };
     await AsyncStorage.setItem(prefix + key, JSON.stringify(item));
   } catch (error) {
-    console.log(error);
+    logger.log(new Error(error));
   }
 };
 
 const isExpired = (item) => {
-  const now = moment(Date.now());
-  const storedTime = moment(item.timestamp);
+  const now = dayjs();
+  const storedTime = dayjs(item.timestamp);
   return now.diff(storedTime, 'minutes') > EXPIRY_IN_MINUTES;
 };
 
@@ -37,7 +38,7 @@ const get = async (key) => {
 
     return item;
   } catch (error) {
-    console.log(error);
+    logger.log(new Error(error));
   }
 };
 

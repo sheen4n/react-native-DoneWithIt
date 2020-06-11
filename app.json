@@ -15,12 +15,31 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true
+    "android": {
+      "package": "com.sheen.donewithit",
+      "versionCode": 1
     },
-    "description": "A great app to sell things that you don't want",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sheen.donewithit",
+      "buildNumber": "1.0.0"
+    },
+    "description": "A marketplace for you to buy and sell things that you do not need anymore.",
     "notification": {
       "iosDisplayInForeground": true
+    },
+    "extra": {
+      "bugsnag": {
+        "apiKey": "9dc1ad8e76c57a6a6782ea62bb55a975"
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "@bugsnag/expo/hooks/post-publish.js",
+          "config": {}
+        }
+      ]
     }
   }
 }

@@ -8,14 +8,14 @@ const initialMessages = [
     id: 1,
     title: 'Talkative Dude',
     description: 'Blah Blah Blah',
-    image: require('../assets/mosh.jpg'),
+    image: require('../assets/jane.jpg'),
   },
   {
     id: 2,
     title: 'Hello World',
     description:
       'Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World',
-    image: require('../assets/mosh.jpg'),
+    image: require('../assets/jane.jpg'),
   },
 ];
 
@@ -42,7 +42,6 @@ const MessagesScreen = () => {
             image={item.image}
             title={item.title}
             subTitle={item.description}
-            onPress={() => console.log('hi')}
             renderRightActions={() => <ListItemDeleteAction onPress={handleDelete(item)} />}
             showChevron
           />

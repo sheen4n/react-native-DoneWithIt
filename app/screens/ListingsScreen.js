@@ -19,6 +19,10 @@ const ListingsScreen = ({ navigation }) => {
     getListingsApi.request();
   }, []);
 
+  const handleRefresh = () => {
+    getListingsApi.request();
+  };
+
   return (
     <>
       <ActivityIndicator visible={getListingsApi.loading} />
@@ -41,6 +45,8 @@ const ListingsScreen = ({ navigation }) => {
               thumbnailUrl={item.images[0].thumbnailUrl}
             />
           )}
+          refreshing={getListingsApi.loading}
+          onRefresh={handleRefresh}
         ></FlatList>
       </Screen>
     </>

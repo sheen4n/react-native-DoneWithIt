@@ -6,6 +6,7 @@ import { Notifications } from 'expo';
 import messages from '../api/messages';
 import { Form, SubmitButton, FormField, ErrorMessage } from '../components/forms';
 import ActivityIndicator from './ActivityIndicator';
+import logger from '../utility/logger';
 
 const validationSchema = Yup.object().shape({
   message: Yup.string().required().min(1).label('Message'),
@@ -24,7 +25,7 @@ export default function ContactSellerForm({ listing }) {
         return setError(response.data.error);
       } else {
         setError('An unexpected error occurred');
-        return console.log(response);
+        return logger.log(new Error(response));
       }
     }
     resetForm();

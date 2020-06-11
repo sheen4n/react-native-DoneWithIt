@@ -26,7 +26,7 @@ const ListingDetailsScreen = ({ route }) => {
           <Text style={styles.title}>{listing.title}</Text>
           <Text style={styles.price}>${listing.price}</Text>
           <View style={styles.userContainer}>
-            <ListItem image={require('../assets/mosh.jpg')} title='Mosh' subTitle='5 Listings' />
+            <ListItem image={require('../assets/jane.jpg')} title='Jane' subTitle='5 Listings' />
           </View>
           <ContactSellerForm listing={listing} />
         </View>

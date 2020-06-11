@@ -8,6 +8,7 @@ import { ErrorMessage, Form, FormField, SubmitButton } from '../components/forms
 import Screen from '../components/Screen';
 import useApi from '../hooks/useApi';
 import ActivityIndicator from '../components/ActivityIndicator';
+import logger from '../utility/logger';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required().min(4).label('Name'),
@@ -28,7 +29,7 @@ const RegisterScreen = () => {
         return setError(response.data.error);
       } else {
         setError('An unexpected error occured');
-        return console.log(response);
+        return logger.log(new Error(response));
       }
     }
 

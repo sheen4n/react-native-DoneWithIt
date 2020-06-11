@@ -11,6 +11,9 @@ import AuthContext from './app/auth/context';
 import authStorage from './app/auth/storage';
 import { AppLoading } from 'expo';
 import { navigationRef } from './app/navigation/rootNavigation';
+import logger from './app/utility/logger';
+
+logger.start();
 
 const App = () => {
   const [user, setUser] = useState();
